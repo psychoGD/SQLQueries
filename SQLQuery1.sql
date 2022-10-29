@@ -79,6 +79,7 @@
 --ORDER BY Id desc
 
 --2. Print group names and their ratings using “Group Name” and “Group Rating”, respectively, as names of the fields
+
 --SELECT [Name],[Rating] AS 'Group Name','Group Rating'
 --FROM Groups
 
@@ -140,18 +141,33 @@
 --11.Print surnames and positions of the teachers who were hired
 --before 01.01.2000.
 
+--SELECT Surname,Position
+--FROM Teachers AS T
+--WHERE T.EmploymentDate>'2000-01-01'
+
 
 
 --12.Print names of the departments in alphabetical order up
 --to  the  Software Development Department. The output field
 --should be named "Name of Department".
 
+--?
 
 --13.Print names of the assistants whose salary (amount of wage
 --rate and premium) is not more than 1200.
---1
---Homework 3
+
+--SELECT Name
+--FROM Teachers
+--WHERE IsAsistan=1 AND Salary<1200
+
 --14.Print names of groups of the 5th year whose rating is in the range
 --from 2 to 4.
+
+
+--SELECT Name
+--FROM Groups
+--WHERE Year=5 AND Rating BETWEEN 2 AND 4
+
+
 --15.Print names of assistants whose wage rate is less than 550 or
---premium is less than 200.
+--premium is less than 200--SELECT Name--FROM Teachers--WHERE IsAsistan=1 AND Salary>550 or Premium>200
